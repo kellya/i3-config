@@ -1,0 +1,31 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "marks": [],
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1030,
+               "width": 1910,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "fam – eresource.py",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^jetbrains\\-pycharm$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

@@ -1,0 +1,91 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "marks": [],
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1040,
+               "width": 1916,
+               "x": 2,
+               "y": 18
+            },
+            "marks": [],
+            "name": "Slack | tux | dorkchat",
+            "percent": 0.25,
+            "swallows": [
+               {
+                "class": "^Slack$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1024,
+               "width": 1896,
+               "x": 24,
+               "y": 56
+            },
+            "marks": [],
+            "name": "Element [1] | alerts",
+            "percent": 0.25,
+            "swallows": [
+               {
+                "class": "^Element$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "none",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1060,
+               "width": 1916,
+               "x": 2,
+               "y": 18
+            },
+            "marks": [],
+            "name": "Candace Rodriguez | Microsoft Teams",
+            "percent": 0.25,
+            "swallows": [
+               {
+                "class": "^Microsoft\\ Teams\\ \\-\\ Preview$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 800,
+               "width": 1200,
+               "x": 360,
+               "y": 140
+            },
+            "marks": [],
+            "name": "Hot topics",
+            "percent": 0.25,
+            "swallows": [
+               {
+                "class": "^Ecency$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
