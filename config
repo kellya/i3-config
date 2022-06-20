@@ -41,7 +41,7 @@ font pango:FiraCode 8
 exec --no-startup-id dex-autostart --autostart --environment i3
 exec --no-startup-id greenclip daemon
 #exec --no-startup-id picom
-exec_always --no-startup-id picom --backend xrender
+exec_always --no-startup-id picom --backend glx --vsync
 
 # Set screen lock
 exec xset s 300 5
@@ -51,11 +51,11 @@ workspace_layout tabbed
 # use gnome settings to set gnome things to dark mode by default
 exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id ~/bin/bg_rotate.sh
-exec --no-startup-id "i3-msg 'workspace $ws1; append_layout ~/.config/i3/w1.json'"
-exec --no-startup-id "i3-msg 'workspace $ws2; append_layout ~/.config/i3/w2.json'"
-exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.config/i3/w4.json'"
-#exec --no-startup-id "i3-msg 'workspace $ws5:comment; append_layout ~/.config/i3/w5.json'"
-exec --no-startup-id "i3-msg 'workspace $ws6; append_layout ~/.config/i3/w6.json'"
+exec --no-startup-id "i3-msg 'workspace $ws1; append_layout ~/.config/i3/layout/w1.json'"
+exec --no-startup-id "i3-msg 'workspace $ws2; append_layout ~/.config/i3/layout/w2.json'"
+exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.config/i3/layout/w4.json'"
+exec --no-startup-id "i3-msg 'workspace $ws5: append_layout ~/.config/i3/layout/w5.json'"
+exec --no-startup-id "i3-msg 'workspace $ws6; append_layout ~/.config/i3/layout/w6.json'"
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -220,7 +220,8 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 bar {
-    status_command i3status
+#    status_command i3status
+    status_command py3status
     strip_workspace_numbers yes
     position bottom
 #    font pango: Hack, Font Awesome 5 Free Regular 10

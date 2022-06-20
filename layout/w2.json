@@ -27,6 +27,26 @@
             "type": "con"
         },
         {
+            "border": "none",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1060,
+               "width": 1916,
+               "x": 2,
+               "y": 18
+            },
+            "marks": [],
+            "name": "Chat | Microsoft Teams",
+            "percent": 0.25,
+            "swallows": [
+               {
+                "class": "^Microsoft\\ Teams\\ \\-\\ Preview$",
+               }
+            ],
+            "type": "con"
+        },
+        {
             "border": "normal",
             "current_border_width": 2,
             "floating": "auto_off",
@@ -42,26 +62,6 @@
             "swallows": [
                {
                 "class": "^Element$"
-               }
-            ],
-            "type": "con"
-        },
-        {
-            "border": "none",
-            "current_border_width": 2,
-            "floating": "auto_off",
-            "geometry": {
-               "height": 1060,
-               "width": 1916,
-               "x": 2,
-               "y": 18
-            },
-            "marks": [],
-            "name": "Candace Rodriguez | Microsoft Teams",
-            "percent": 0.25,
-            "swallows": [
-               {
-                "class": "^Microsoft\\ Teams\\ \\-\\ Preview$"
                }
             ],
             "type": "con"
