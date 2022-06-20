@@ -42,6 +42,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 exec --no-startup-id greenclip daemon
 #exec --no-startup-id picom
 exec_always --no-startup-id picom --backend glx --vsync
+exec --no-startup-id /home/kellya/projects/public/gnome-keyring-yubikey-unlock /home/kellya/gnome-secret
 
 # Set screen lock
 exec xset s 300 5
@@ -221,7 +222,7 @@ bindsym $mod+r mode "resize"
 #}
 bar {
 #    status_command i3status
-    status_command py3status
+    status_command ~/.local/bin/py3status
     strip_workspace_numbers yes
     position bottom
 #    font pango: Hack, Font Awesome 5 Free Regular 10
