@@ -37,11 +37,10 @@
                "y": 18
             },
             "marks": [],
-            "name": "Chat | Microsoft Teams",
             "percent": 0.25,
             "swallows": [
                {
-                "class": "^Microsoft\\ Teams\\ \\-\\ Preview$",
+                "class": "^.*Microsoft.*Teams.*-.*Preview.*$"
                }
             ],
             "type": "con"
