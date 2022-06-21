@@ -52,8 +52,11 @@ workspace_layout tabbed
 # use gnome settings to set gnome things to dark mode by default
 exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id ~/bin/bg_rotate.sh
+exec --no-startup-id firefox
+exec --no-startup-id "kitty --name mail neomutt"
 exec --no-startup-id "i3-msg 'workspace $ws1; append_layout ~/.config/i3/layout/w1.json'"
 exec --no-startup-id "i3-msg 'workspace $ws2; append_layout ~/.config/i3/layout/w2.json'"
+exec --no-startup-id "i3-msg 'workspace $ws3; append_layout ~/.config/i3/layout/w3.json'"
 exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.config/i3/layout/w4.json'"
 exec --no-startup-id "i3-msg 'workspace $ws5: append_layout ~/.config/i3/layout/w5.json'"
 exec --no-startup-id "i3-msg 'workspace $ws6; append_layout ~/.config/i3/layout/w6.json'"
@@ -229,7 +232,7 @@ bar {
 #    font pango: Font Awesome 5 Free Solid, Font Awesome 5 Brands Regular 8
     font pango:Font Awesome 5 Free Solid, Font Awesome 5 Brands Regular, Font Awesome 5 Brands Regular, Hack 10
 #    separator_symbol "⁞"
-    separator_symbol "grip-vertical"
+    separator_symbol "⸽"
     colors {
         statusline #686f9a
         separator #5ccc96
