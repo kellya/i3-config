@@ -1,10 +1,12 @@
 # This configuration has been modified.  Mostly global config is in this config, everything else
 # is in conf.d
+
+#Set the $mod key to super/meta/"windows key"
 set $mod Mod4
+#Set $alt to the alt key
 set $alt Mod1
 
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
+# Define names for default workspaces
 # don't use quotes and spaces like the example, run it all together or the restore won't work
 set $ws1 1:fire
 set $ws2 2:comment
@@ -28,14 +30,13 @@ hide_edge_borders smart
 #font pango:DejaVu Sans Mono 8
 
 exec --no-startup-id greenclip daemon
-#exec --no-startup-id picom
 exec_always --no-startup-id picom --backend glx --vsync
 exec --no-startup-id /home/kellya/projects/public/gnome-keyring-yubikey-unlock /home/kellya/gnome-secret
 
 # Set screen lock
 exec xset s 300 5
 exec xss-lock -n /usr/libexec/xsecurelock/dimmer -l -- xsecurelock
-workspace_layout tabbed
+# Load workspace configs
 exec --no-startup-id "i3-msg 'workspace $ws1; append_layout ~/.config/i3/layout/w1.json'"
 exec --no-startup-id "i3-msg 'workspace $ws2; append_layout ~/.config/i3/layout/w2.json'"
 exec --no-startup-id "i3-msg 'workspace $ws3; append_layout ~/.config/i3/layout/w3.json'"
@@ -44,14 +45,15 @@ exec --no-startup-id "i3-msg 'workspace $ws5; append_layout ~/.config/i3/layout/
 exec --no-startup-id "i3-msg 'workspace $ws6; append_layout ~/.config/i3/layout/w6.json'"
 # use gnome settings to set gnome things to dark mode by default
 exec --no-startup-id /usr/libexec/gsd-xsettings
+# start background rotator script
 exec --no-startup-id ~/bin/bg_rotate.sh
+# Always need firefox, so let's just start it
 exec --no-startup-id firefox
+# Create a kitty workspace for mail
 exec --no-startup-id "kitty --name mail neomutt"
-#attempt to move this after the desktop restore in hopes that shitty teams will start where it's fucking supposed to!
 exec --no-startup-id dex-autostart --autostart --environment i3
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
+# start nm-applet for network tray icon
 exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
@@ -60,9 +62,8 @@ set $refresh_i3status killall -SIGUSR1 i3status
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-for_window [all] title_window_icon on
-for_window [all] title_window_icon padding 1px
-for_window [all] title_format "%class"
-for_window [class="gnome-calculator"] floating enable
+# New workspaces will get fullscreen/tabbed by default
+workspace_layout tabbed
 
+# Pull the rest of config from .conf files in conf.d
 include conf.d/*.conf
