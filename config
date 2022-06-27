@@ -25,6 +25,15 @@ set $ws10 10
 font pango:FiraCode 8
 hide_edge_borders smart
 
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# New workspaces will get fullscreen/tabbed by default
+workspace_layout tabbed
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -32,6 +41,8 @@ hide_edge_borders smart
 exec --no-startup-id greenclip daemon
 exec_always --no-startup-id picom --backend glx --vsync
 exec --no-startup-id /home/kellya/projects/public/gnome-keyring-yubikey-unlock /home/kellya/gnome-secret
+# start nm-applet for network tray icon
+exec --no-startup-id nm-applet
 
 # Set screen lock
 exec xset s 300 5
@@ -53,17 +64,6 @@ exec --no-startup-id firefox
 exec --no-startup-id "kitty --name mail neomutt"
 exec --no-startup-id dex-autostart --autostart --environment i3
 
-# start nm-applet for network tray icon
-exec --no-startup-id nm-applet
-
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-# New workspaces will get fullscreen/tabbed by default
-workspace_layout tabbed
 
 # Pull the rest of config from .conf files in conf.d
 include conf.d/*.conf
