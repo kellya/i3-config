@@ -11,6 +11,11 @@ I like the common conf.d directory approach to configuration.  So I have laid
 out my configuration in a way that global configs are put in the config file,
 and everything else is included via conf.d/*.conf.
 
+autorun.conf contains all the exec statements to start automaticlaly when the
+session begins
+
+workspaces.conf contains the variables for the workspace names/icons
+
 # What I'm using
 
 feh - for my background updater
