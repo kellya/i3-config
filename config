@@ -22,7 +22,7 @@ floating_modifier $mod
 include workspaces.conf
 
 # Include the initial exec commands
-include autorun.conf
+include autostart.conf
 
 
 # Pull the rest of config from .conf files in conf.d
